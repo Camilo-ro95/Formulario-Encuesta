@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario-Encuesta</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Encuestas Casino</h1>
+            <p id="description" class="description text-center">
+                El dia de hoy cuentanos cual es tu carne favorita
+            </p>
+        </header>
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Nombre</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Ingrese su nombre"
+                    required />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Correo</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Ingrese su correo"
+                    required />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Edad</label>
+                <input type="number" name="age" id="number" min="18" max="80" class="form-control"
+                    placeholder="Ingrese su edad" />
+            </div>
+            
+            <div class="form-group">
+                <p>Area de trabajo</p>
+                <label>
+                    <input name="user-recommend" value="prod" type="radio" class="input-radio" checked />Planta de
+                    producción</label>
+                <label>
+                    <input name="user-recommend" value="bod" type="radio" class="input-radio" />Bodega</label>
+
+                <label><input name="user-recommend" value="alm" type="radio" class="input-radio" />Almacen</label>
+            </div>
+
+            <div class="form-group">
+                <p>Cargo actual</p>
+                <select id="dropdown" name="position" class="form-control" required>
+                    <option disabled selected value>Seleccione su cargo</option>
+                    <option value="mant">Mecanico de mantenimiento</option>
+                    <option value="oper">Operario de mantenimiento</option>
+                    <option value="coor">Coordinador</option>
+                    <option value="dir">Director de area</option>
+                    <option value="aseo">Personal de aseo</option>
+                    <option value="seg">Guarda de seguridad</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>
+                    Dejanos saber cuales son tus carnes preferidas
+                </p>
+
+                <label><input name="prefer" value="sobr" type="checkbox" class="input-checkbox" />Sobre barriga</label>
+                <label><input name="prefer" value="chul" type="checkbox" class="input-checkbox" />Chuleta</label>
+                <label><input name="prefer" value="chur" type="checkbox" class="input-checkbox" />Churrasco</label>
+                <label><input name="prefer" value="asad" type="checkbox" class="input-checkbox" />Carne asada</label>
+            </div>
+
+            <div class="form-group">
+                <p>Dejanos saber tus sugerencias</p>
+                <textarea id="sugerencias" class="input-textarea" name="suger"
+                    placeholder="Lo tendremos en cuenta..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Enviar
+                </button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
